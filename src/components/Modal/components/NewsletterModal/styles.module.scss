@@ -1,0 +1,58 @@
+@import "../../../../scss/mixins.scss";
+
+.boxNewsletterModal {
+    width: 80%;
+    .newsletterForm {
+        flex-direction: column;
+        gap: 15px;
+        min-width: 80%;
+
+        div {
+            width: 100%;
+        }
+
+        input {
+            @include border-radius(10px);
+            width: 100%;
+            color: var(--dark-gray);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            padding: 10px 25px;
+            border: 1px solid var(--neutral-gray);
+            background-color: transparent;
+            margin-bottom: 15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            @include border-radius(10px);
+            @include d-flex-center;
+            gap: 10px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: var(--white);
+            background-color: var(--orange);
+            min-width: 100%;
+            padding: 9px;
+
+            &:hover {
+                background-color: var(--light-orange);
+            }
+
+            img {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}

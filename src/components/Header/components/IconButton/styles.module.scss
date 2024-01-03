@@ -1,0 +1,23 @@
+@import "../../../../scss/mixins.scss";
+
+.iconButton {
+    @include d-flex-center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--white);
+    padding: 13px 14px;
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-decoration: none;
+
+    &:hover {
+        border: 1px solid var(--gray);
+    }
+}
+
+.bordered {
+    border: 1px solid var(--orange);
+}

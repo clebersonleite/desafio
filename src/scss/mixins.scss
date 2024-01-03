@@ -1,0 +1,40 @@
+@mixin d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin d-inline-flex-center {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin d-flex-start {
+    display: flex;
+    justify-content: flex-star;
+    align-items: center;
+}
+
+@mixin d-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin border-radius($value) {
+    border-radius: $value;
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+}

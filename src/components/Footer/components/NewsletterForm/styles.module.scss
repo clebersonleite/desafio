@@ -1,0 +1,95 @@
+@import "../../../../scss/mixins.scss";
+
+.boxNewsletterForm {
+    @include d-flex-between;
+    gap: 15px;
+
+    h2 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        margin-bottom: 0;
+    }
+
+    .newsletterForm {
+        @include d-flex-center;
+        min-width: 630px;
+
+        div {
+            width: 100%;
+        }
+
+        input {
+            @include border-radius(4px);
+            width: 100%;
+            color: var(--dark-gray);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            padding: 10px 25px;
+            border: 1px solid var(--dark-gray);
+            background-color: var(--white);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            @include d-flex-center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+            color: var(--white);
+            background-color: var(--orange);
+            min-width: 131px;
+            padding: 9px;
+            margin-left: -10px;
+
+            &:hover {
+                background-color: var(--light-orange);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .boxNewsletterForm {
+        flex-direction: column;
+        gap: 15px;
+
+        .newsletterForm {
+            @include d-flex-center;
+            min-width: 80%;
+
+            div {
+                width: 100%;
+            }
+
+            input {
+                @include border-radius(4px);
+                width: 100%;
+                color: var(--dark-gray);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+                padding: 7px 25px;
+                border: 1px solid var(--dark-gray);
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                min-width: 110px;
+                padding: 7px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

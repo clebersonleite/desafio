@@ -1,0 +1,113 @@
+@import "../../scss/mixins.scss";
+
+.topHeader {
+    @include d-flex-center;
+    background: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    height: 24px;
+}
+
+.middleHeaderRow {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+}
+
+.desktopHeader {
+    .middleHeader {
+        .logo {
+            padding: 35px 0;
+            @include d-flex-center;
+        }
+
+        .searchBox {
+            @include align-center;
+
+            form {
+                border-radius: 10px;
+                background: #efefef;
+                @include d-flex-center;
+                width: 100%;
+
+                div {
+                    width: 100%;
+                    padding: 0 25px;
+                }
+
+                input[name] {
+                    width: 100%;
+                    color: var(--dark-gray);
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 18px;
+                    padding: 9px;
+                    border: 0;
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    @include d-flex-center;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 21px;
+                    color: var(--white);
+                    background-color: var(--orange);
+                    min-width: 119px;
+                    padding: 9px;
+
+                    &:hover {
+                        background-color: var(--light-orange);
+                    }
+                }
+            }
+        }
+
+        .myAccountBox {
+            @include d-flex-end;
+            gap: 10px;
+        }
+    }
+}
+
+.mobileHeader {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .desktopHeader {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: block;
+        .middleHeader {
+            @include d-flex-center;
+            padding: 31px 0;
+        }
+
+        .mobileNav {
+            text-align: center;
+        }
+
+        .myAccountBox {
+            @include d-flex-end;
+            gap: 40px;
+
+            .shoppingCartButton {
+                margin-right: 10px;
+            }
+        }
+    }
+}

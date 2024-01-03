@@ -1,0 +1,41 @@
+@import "../../scss/mixins.scss";
+
+.brandsBar {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h2 {
+        color: var(--dark-gray);
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        margin-bottom: 17px;
+    }
+
+    .brandItem {
+        align-items: center;
+        @include border-radius(10px);
+        display: flex !important;
+        align-items: center;
+        gap: 22px;
+        font-size: 12px;
+
+        img {
+            @include border-radius(4px);
+            -webkit-box-shadow: 0px 11px 5px -8px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 0px 11px 5px -8px rgba(0, 0, 0, 0.41);
+            box-shadow: rgb(233 233 233 / 41%) 0px 11px 5px -8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .brandsBar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        h2 {
+            font-size: 24px;
+        }
+    }
+}

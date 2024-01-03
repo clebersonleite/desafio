@@ -1,0 +1,107 @@
+@import "../../scss/mixins.scss";
+
+.productsContainer {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h2 {
+        color: var(--dark-gray);
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        margin-bottom: 17px;
+    }
+
+    .productsSlide {
+        background: #000;
+    }
+
+    .productItem {
+        .imageBox {
+            a img {
+                opacity: 1;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .boxProductColors {
+            padding: 0px 25px;
+            ul {
+                display: flex;
+                gap: 5px;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: flex;
+                    a {
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        border: 1px solid transparent;
+                        @include border-radius(3px);
+                        &:hover {
+                            border: 1px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .productDetails {
+            padding: 8px 25px;
+            .productPrice {
+                font-size: 20px;
+                font-weight: 900;
+                padding: 8px 0;
+                display: flex;
+            }
+
+            .productTitle {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                height: 55px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .btnAddCart {
+                @include d-flex-center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+                color: var(--white);
+                background-color: var(--orange);
+                min-width: 119px;
+                padding: 9px;
+                border-radius: 4px;
+                &:hover {
+                    background-color: var(--light-orange);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .productsContainer {
+        padding-left: 20px;
+        margin-top: 20px;
+        h2 {
+            font-size: 24px;
+        }
+    }
+    .productsSlide {
+        .swiper-button-next {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../scss/mixins.scss";
+
+.bannersBar {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .bannersRow {
+        @include d-flex-start;
+
+        .bannerTextBox {
+            h2 {
+                color: var(--black);
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                padding-right: 65px;
+            }
+        }
+
+        .bannerImage {
+            img {
+                @include border-radius(4px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bannersBar {
+        padding: 23px 25px;
+        .bannersRow {
+            flex-direction: column;
+
+            .bannerTextBox {
+                p {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
