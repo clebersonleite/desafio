@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "next/image";
-import { IProductsGlobal } from "@/@types";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import styles from "./styles.module.scss";
-import { Navigation } from "swiper/modules";
-import Link from "next/link";
-import Value from "./components/Value";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'next/image';
+import { IProductsGlobal } from '@/@types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import styles from './styles.module.scss';
+import { Navigation } from 'swiper/modules';
+import Link from 'next/link';
+import Value from './components/Value';
 
 interface IProducts {
   heading: string;
@@ -51,7 +51,7 @@ export default function Slider({ heading, products }: IProducts) {
                 spaceBetween: 15,
               },
             }}
-            className="productsSlide"
+            className='productsSlide'
           >
             {products.map(
               ({
@@ -66,13 +66,13 @@ export default function Slider({ heading, products }: IProducts) {
                 return (
                   <SwiperSlide key={productId} className={styles.productItem}>
                     <figure className={styles.imageBox}>
-                      <Link href="/">
+                      <Link href='/'>
                         <Image
                           src={productImageUrl}
-                          alt=""
+                          alt=''
                           width={308}
                           height={381}
-                          style={{ width: "100%", height: "auto" }}
+                          style={{ width: '100%', height: 'auto' }}
                         />
                       </Link>
                     </figure>
@@ -82,7 +82,7 @@ export default function Slider({ heading, products }: IProducts) {
                           return (
                             <li key={colorId}>
                               <Link
-                                href="/"
+                                href='/'
                                 className={styles.variationColorLink}
                                 style={{ backgroundColor: colorCode }}
                               ></Link>
@@ -97,7 +97,7 @@ export default function Slider({ heading, products }: IProducts) {
                       </span>
                       <h3 className={styles.productTitle}>{productTitle}</h3>
                       <p>{productExcerpt}</p>
-                      <Link href="/" className={styles.btnAddCart}>
+                      <Link href='/' className={styles.btnAddCart}>
                         Adicionar
                       </Link>
                     </div>

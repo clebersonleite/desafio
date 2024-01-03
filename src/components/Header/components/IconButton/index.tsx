@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./styles.module.scss";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import styles from './styles.module.scss';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const borderButton = false;
 
@@ -22,7 +22,7 @@ export default function IconButton({
   url,
   iconWidth = 14,
   iconHeight = 16,
-  alt = "",
+  alt = '',
 }: IIconButton) {
   return (
     <Link

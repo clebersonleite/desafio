@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import styles from "./styles.module.scss";
-import React, { useState } from "react";
-import { Form } from "react-bootstrap";
-import Image from "next/image";
+import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
+import Image from 'next/image';
 
 // form
-import { Formik } from "formik";
-import * as Yup from "yup";
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 export interface INewsletterFormValues {
   email: string;
@@ -15,11 +15,11 @@ export interface INewsletterFormValues {
 
 export default function NewsletterModal() {
   const initialValues: INewsletterFormValues = {
-    email: "",
+    email: '',
   };
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().required("É necessário informar um e-mail válido!"),
+    email: Yup.string().required('É necessário informar um e-mail válido!'),
   });
 
   const formSubmit = (values: INewsletterFormValues) => {
@@ -44,21 +44,21 @@ export default function NewsletterModal() {
           <form onSubmit={handleSubmit} className={styles.newsletterForm}>
             <Form.Group>
               <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite o seu e-mail"
+                type='email'
+                id='email'
+                name='email'
+                placeholder='Digite o seu e-mail'
                 value={values.email}
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
             </Form.Group>
 
-            <button className="btn btn-orange" type="submit">
+            <button className='btn btn-orange' type='submit'>
               Enviar
               <Image
-                src="/images/icons/paper_plane.svg"
-                alt=""
+                src='/images/icons/paper_plane.svg'
+                alt=''
                 width={14}
                 height={13}
               />

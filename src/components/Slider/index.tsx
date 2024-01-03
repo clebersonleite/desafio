@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { Carousel } from "react-bootstrap";
-import Image from "next/image";
-import { ISliderGlobal } from "@/@types";
-import Link from "next/link";
-import styles from "./styles.module.scss";
-import { Montserrat } from "next/font/google";
+import { Carousel } from 'react-bootstrap';
+import Image from 'next/image';
+import { ISliderGlobal } from '@/@types';
+import Link from 'next/link';
+import styles from './styles.module.scss';
+import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: "400",
+  subsets: ['latin'],
+  weight: '400',
 });
 
 interface ISlider {
@@ -20,10 +20,10 @@ export default function Slider({ images }: ISlider) {
   return (
     <Carousel
       nextIcon={
-        <Image src="/images/slide/next.svg" alt="" width={20} height={32} />
+        <Image src='/images/slide/next.svg' alt='' width={20} height={32} />
       }
       prevIcon={
-        <Image src="/images/slide/prev.svg" alt="" width={20} height={32} />
+        <Image src='/images/slide/prev.svg' alt='' width={20} height={32} />
       }
       fade
     >
@@ -43,13 +43,13 @@ export default function Slider({ images }: ISlider) {
                 <Image
                   src={imageSrc}
                   className={styles.imageDesktop}
-                  alt=""
+                  alt=''
                   fill
                 />
                 <Image
                   src={imageMobileSrc}
                   className={styles.imageMobileSrc}
-                  alt=""
+                  alt=''
                   fill
                 />
               </figure>

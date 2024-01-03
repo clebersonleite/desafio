@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Titillium_Web, Montserrat } from "next/font/google";
-import "./globals.scss";
+import type { Metadata } from 'next';
+import { Titillium_Web, Montserrat } from 'next/font/google';
+import './globals.scss';
 
 const titilium = Titillium_Web({
-  subsets: ["latin"],
-  weight: "400",
+  subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
-  title: "Desafio Maeztra",
-  description: "Por Cleberson Leite, utilizando Next",
+  title: 'Desafio Maeztra',
+  description: 'Por Cleberson Leite, utilizando Next',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang='pt-BR'>
       <body className={titilium.className}>{children}</body>
     </html>
   );

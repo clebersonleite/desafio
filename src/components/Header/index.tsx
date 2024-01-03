@@ -1,12 +1,12 @@
-import styles from "./styles.module.scss";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "next/image";
-import Link from "next/link";
-import SearchForm from "./components/SearchForm";
-import IconButton from "./components/IconButton";
-import MainMenu from "./components/MainMenu";
+import styles from './styles.module.scss';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'next/image';
+import Link from 'next/link';
+import SearchForm from './components/SearchForm';
+import IconButton from './components/IconButton';
+import MainMenu from './components/MainMenu';
 
 export default function Header() {
   return (
@@ -23,12 +23,12 @@ export default function Header() {
           <Container>
             <Row className={styles.middleHeader}>
               <Col lg={2} className={styles.logo}>
-                <Link href="/" title="Home | Maeztra">
+                <Link href='/' title='Home | Maeztra'>
                   <Image
-                    src="/images/logo.svg"
+                    src='/images/logo.svg'
                     width={147}
                     height={18}
-                    alt="Logo | Maeztra"
+                    alt='Logo | Maeztra'
                   />
                 </Link>
               </Col>
@@ -37,23 +37,23 @@ export default function Header() {
               </Col>
               <Col lg={4} className={styles.myAccountBox}>
                 <IconButton
-                  icon="/images/icons/user.svg"
-                  text="Minha Conta"
-                  url="/"
+                  icon='/images/icons/user.svg'
+                  text='Minha Conta'
+                  url='/'
                   iconWidth={14}
                   iconHeight={16}
                 />
                 <IconButton
-                  icon="/images/icons/wishlist.svg"
-                  text="Favoritos"
-                  url="/"
+                  icon='/images/icons/wishlist.svg'
+                  text='Favoritos'
+                  url='/'
                   iconWidth={18.281}
                   iconHeight={16}
                 />
                 <IconButton
-                  icon="/images/icons/shopping-cart.svg"
-                  text="Meu Carrinho"
-                  url="/"
+                  icon='/images/icons/shopping-cart.svg'
+                  text='Meu Carrinho'
+                  url='/'
                   iconWidth={14.536}
                   iconHeight={16}
                   bordered
@@ -83,44 +83,44 @@ export default function Header() {
         <Container fluid>
           <Row className={styles.middleHeader}>
             <Col xs={2} className={styles.mobileNav}>
-              <Link href="/">
+              <Link href='/'>
                 <Image
-                  src="/images/icons/menu.svg"
+                  src='/images/icons/menu.svg'
                   width={24}
                   height={24}
-                  alt="Menu"
+                  alt='Menu'
                 />
               </Link>
             </Col>
             <Col xs={4} className={styles.logo}>
-              <Link href="/" title="Home | Maeztra">
+              <Link href='/' title='Home | Maeztra'>
                 <Image
-                  src="/images/logo.svg"
+                  src='/images/logo.svg'
                   width={110}
                   height={12}
-                  alt="Logo | Maeztra"
+                  alt='Logo | Maeztra'
                 />
               </Link>
             </Col>
             <Col xs={6} className={styles.myAccountBox}>
-              <Link href="/" title="Buscar Produtos">
+              <Link href='/' title='Buscar Produtos'>
                 <Image
-                  src="/images/icons/search.svg"
+                  src='/images/icons/search.svg'
                   width={24}
                   height={24}
-                  alt="Icone de uma Lupa"
+                  alt='Icone de uma Lupa'
                 />
               </Link>
               <Link
-                href="/"
-                title="Sacola de Compras"
+                href='/'
+                title='Sacola de Compras'
                 className={styles.shoppingCartButton}
               >
                 <Image
-                  src="/images/icons/shopping-basket.svg"
+                  src='/images/icons/shopping-basket.svg'
                   width={21}
                   height={24}
-                  alt="Icone de uma Sacola de Compras"
+                  alt='Icone de uma Sacola de Compras'
                 />
               </Link>
             </Col>

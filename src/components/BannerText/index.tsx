@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "next/image";
-import { IBannersGlobal } from "@/@types";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import styles from "./styles.module.scss";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'next/image';
+import { IBannersGlobal } from '@/@types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import styles from './styles.module.scss';
 
 interface IBanners {
   data: IBannersGlobal[];
@@ -30,7 +30,7 @@ export default function BannerText({ data }: IBanners) {
                   alt={title}
                   width={1114}
                   height={480}
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </Col>
             </Row>

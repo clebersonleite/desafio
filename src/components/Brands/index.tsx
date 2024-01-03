@@ -1,13 +1,13 @@
-"use client";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "next/image";
-import { IBrandsGlobal } from "@/@types";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import styles from "./styles.module.scss";
+'use client';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'next/image';
+import { IBrandsGlobal } from '@/@types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import styles from './styles.module.scss';
 
 interface IBrands {
   heading: string;
@@ -41,17 +41,17 @@ export default function Slider({ heading, brands }: IBrands) {
                 spaceBetween: 15,
               },
             }}
-            className="brandsSlide"
+            className='brandsSlide'
           >
             {brands.map(({ id, imageSrc }) => {
               return (
                 <SwiperSlide key={id} className={styles.brandItem}>
                   <Image
                     src={imageSrc}
-                    alt=""
+                    alt=''
                     width={308}
                     height={64}
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </SwiperSlide>
               );

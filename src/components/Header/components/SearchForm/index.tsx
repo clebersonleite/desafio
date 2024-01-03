@@ -1,11 +1,11 @@
-"use client";
-import styles from "./styles.module.scss";
-import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+'use client';
+import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 
 // form
-import { Formik } from "formik";
-import * as Yup from "yup";
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 export interface ISearchFormValues {
   keyword: string;
@@ -13,11 +13,11 @@ export interface ISearchFormValues {
 
 export default function SearchForm() {
   const initialValues: ISearchFormValues = {
-    keyword: "",
+    keyword: '',
   };
 
   const validationSchema = Yup.object().shape({
-    keyword: Yup.string().required("É necessário informar uma palavra-chave!"),
+    keyword: Yup.string().required('É necessário informar uma palavra-chave!'),
   });
 
   const formSubmit = (values: ISearchFormValues) => {
@@ -42,16 +42,16 @@ export default function SearchForm() {
           <form onSubmit={handleSubmit}>
             <Form.Group>
               <input
-                type="text"
-                id="keyword"
-                name="keyword"
-                placeholder="O Que Você Busca?"
+                type='text'
+                id='keyword'
+                name='keyword'
+                placeholder='O Que Você Busca?'
                 value={values.keyword}
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
             </Form.Group>
-            <button className="btn btn-orange" type="submit">
+            <button className='btn btn-orange' type='submit'>
               Buscar
             </button>
           </form>

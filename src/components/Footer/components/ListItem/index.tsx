@@ -1,8 +1,8 @@
-"use client";
-import React, { useState } from "react";
-import styles from "./styles.module.scss";
-import Col from "react-bootstrap/Col";
-import Link from "next/link";
+'use client';
+import React, { useState } from 'react';
+import styles from './styles.module.scss';
+import Col from 'react-bootstrap/Col';
+import Link from 'next/link';
 
 interface ILinksList {
   href: string;
@@ -29,10 +29,10 @@ export default function ListItem({
   const toggleListVisibility = (e: any) => {
     let elemento = e.nextElementSibling;
 
-    if (elemento.style.display === "none" || !elemento.style.display) {
-      elemento.style.display = "block";
+    if (elemento.style.display === 'none' || !elemento.style.display) {
+      elemento.style.display = 'block';
     } else {
-      elemento.style.display = "none";
+      elemento.style.display = 'none';
     }
   };
 

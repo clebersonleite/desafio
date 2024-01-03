@@ -1,12 +1,12 @@
-"use client";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "next/image";
-import { IBenefitsGlobal } from "@/@types";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import styles from "./styles.module.scss";
+'use client';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'next/image';
+import { IBenefitsGlobal } from '@/@types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import styles from './styles.module.scss';
 
 interface IBenefits {
   heading: string;
@@ -40,13 +40,13 @@ export default function Slider({ heading, benefits }: IBenefits) {
                 spaceBetween: 15,
               },
             }}
-            className="benefitSlide"
+            className='benefitSlide'
           >
             {benefits.map(({ id, iconSrc, title, subtitle }) => {
               return (
                 <SwiperSlide key={id} className={styles.benefitItem}>
-                  <Image src={iconSrc} alt="" width={32} height={32} />
-                  <div className="caption">
+                  <Image src={iconSrc} alt='' width={32} height={32} />
+                  <div className='caption'>
                     <strong>{title}</strong>
                     <br /> {subtitle}
                   </div>

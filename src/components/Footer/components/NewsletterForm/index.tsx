@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import styles from "./styles.module.scss";
-import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 
 // form
-import { Formik } from "formik";
-import * as Yup from "yup";
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 export interface INewsletterFormValues {
   email: string;
@@ -14,11 +14,11 @@ export interface INewsletterFormValues {
 
 export default function SearchForm() {
   const initialValues: INewsletterFormValues = {
-    email: "",
+    email: '',
   };
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().required("É necessário informar um e-mail válido!"),
+    email: Yup.string().required('É necessário informar um e-mail válido!'),
   });
 
   const formSubmit = (values: INewsletterFormValues) => {
@@ -44,17 +44,17 @@ export default function SearchForm() {
           <form onSubmit={handleSubmit} className={styles.newsletterForm}>
             <Form.Group>
               <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite o seu e-mail"
+                type='email'
+                id='email'
+                name='email'
+                placeholder='Digite o seu e-mail'
                 value={values.email}
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
             </Form.Group>
 
-            <button className="btn btn-orange" type="submit">
+            <button className='btn btn-orange' type='submit'>
               Enviar
             </button>
           </form>
