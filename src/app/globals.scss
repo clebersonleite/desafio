@@ -130,5 +130,6 @@ figure {
 @media screen and (max-width: 1024px) {
   .modal.show .modal-dialog {
     margin-top: 80px;
+    top: unset;
   }
 }
